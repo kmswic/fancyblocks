@@ -25,15 +25,10 @@ export class Loader extends React.Component {
                         cy={midpoint + Math.cos(i * Math.PI / 3) * r}
                         fill="none"
                         style={{
-                            stroke: `hsl(${(i + 3) / 6 * 360}, 80%, 70%)`,
-                            transform: `rotate(-${i * 60}deg)`
+                            stroke: `hsl(${1}, 80%, 70%)`,
+                            transform: `rotate(-${150 + i * 60}deg)`
                         }}
-                        strokeDasharray={`
-                            0
-                            ${arc * 7/4}
-                            ${arc}
-                            ${arc/4}
-                        `}
+                        strokeDasharray={`${arc} ${arc*2}`}
                     />
                 ))}
             </svg>
