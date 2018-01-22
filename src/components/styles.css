@@ -1,14 +1,21 @@
 @keyframes petals {
-    from {
-        stroke-dashoffset: 0;
-    }
-
     to {
-        stroke-dashoffset: 105%; /* roughly 2*PI*r */
+        stroke-dashoffset: 0; /* roughly 2*PI*r */
     }
 }
 
 .petal {
-    animation: petals 1.4s 3s infinite alternate-reverse ease-in-out;
+    animation: petals 1.4s infinite alternate ease-in-out;
     transform-origin: 50% 50%;
+}
+
+@keyframes spin {
+    to {
+        transform-origin: 50% 50%;
+        transform: rotate(360deg);
+    }
+}
+
+.loader {
+    animation: spin 4s infinite linear;
 }
