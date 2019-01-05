@@ -1,16 +1,21 @@
 @keyframes petals {
-    from {
-        stroke-dashoffset: 0;
-        /* transform: none; */
-    }
+  from {
+    stroke-dashoffset: 628;
+    /* transform: none; */
+  }
 
-    to {
-        stroke-dashoffset: 635; /* roughly 2*PI*r */
-        /* transform: rotate(60deg) */
-    }
+  70% {
+    /* roughly 2*PI*r */
+    stroke-dashoffset: 104;
+  }
+
+  100% {
+    /* roughly 2*PI*r */
+    stroke-dashoffset: 104;
+  }
 }
 
 .petal {
-    animation: petals 1s infinite alternate ease-in-out;
-    transform-origin: 50% 50%;
+  animation: petals 1.3s infinite alternate ease-in-out;
+  transform-origin: center;
 }
